@@ -1,0 +1,85 @@
+/* src/styles/AdminPanel.css */
+
+.admin-panel-container {
+  padding: 30px;
+  background-color: #f0f2bd;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.admin-logout-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.admin-logout-btn {
+  background-color: #ca7842;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.admin-logout-btn:hover {
+  background-color: #a55e34;
+}
+
+.admin-panel-title {
+  text-align: center;
+  color: #4b352a;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.admin-panel-error {
+  background-color: #ffdddd;
+  color: #a94442;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.admin-panel-dashboard {
+  background-color: #b2cd9c;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.admin-section {
+  background: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.admin-section h2 {
+  color: #ca7842;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+table th, table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background-color: #4b352a;
+  color: white;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
