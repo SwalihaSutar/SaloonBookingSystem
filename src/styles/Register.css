@@ -1,0 +1,175 @@
+/* === Background with white fade overlay and animation === */
+.register-container {
+  position: relative;
+  min-height: 100vh;
+  background: url("../assets/register-bg.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: zoomBackground 10s infinite alternate ease-in-out;
+}
+
+.register-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.5); /* Light white overlay */
+  z-index: 1;
+}
+
+@keyframes zoomBackground {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
+  }
+}
+
+/* === Form Box === */
+.register-form-wrapper {
+  position: relative;
+  z-index: 2;
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  border: 2px solid black; /* Black border consistent with OwnerAuth */
+  box-shadow: 0 8px 24px rgba(10, 35, 66, 0.3); /* Blueish shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.register-form-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+/* === Title === */
+.register-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #0A2342; /* Owner auth blue */
+}
+
+/* === Form === */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  align-items: center;
+}
+
+/* === Inputs === */
+.input-style {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-style:focus {
+  border-color: #0A2342; /* Blue border on focus */
+  box-shadow: 0 0 0 2px rgba(10, 35, 66, 0.3); /* Blue shadow */
+}
+
+/* === Password Eye Icon === */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-input {
+  padding-right: 40px;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #0A2342; /* Blue color */
+  cursor: pointer;
+}
+
+/* === Unified Button Style === */
+.btn-primary,
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  background-color: #0A2342;  /* Owner blue */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background-color: #102a4e; /* Darker blue hover */
+  transform: scale(1.02);
+}
+
+/* === Error Messages === */
+.error-text {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 5px;
+  text-align: left;
+  width: 100%;
+}
+
+/* === Already have an account link === */
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.register-link-highlight {
+  color: #0A2342; /* Owner blue */
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 4px;
+  transition: color 0.3s ease;
+}
+
+.register-link-highlight:hover {
+  color: #102a4e; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Add this to your existing Registration.css */
+
+@keyframes buttonClickFlash {
+  0% {
+    transform: scale(1);
+    background-color: #CA7842;
+  }
+  50% {
+    transform: scale(0.95);
+    background-color: #B2CD9C;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #CA7842;
+  }
+}
+
+.button-click-animate {
+  animation: buttonClickFlash 0.4s ease;
+}

@@ -1,0 +1,14 @@
+/* src/components/OwnerDashboard.css */
+
+.nav-link {
+  transition: background-color 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: #343a40;
+  border-radius: 5px;
+}
+
+h4 {
+  font-weight: bold;
+}
